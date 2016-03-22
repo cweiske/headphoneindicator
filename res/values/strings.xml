@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Headphone indicator</string>
+    <string name="plugged">Headphones are plugged in</string>
+    <string name="unplugged">Headphones are NOT plugged in</string>
+</resources>
