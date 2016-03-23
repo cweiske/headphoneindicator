@@ -9,6 +9,18 @@ The app aims to be a tiny as possible.
 Runs on Android 4.4+.
 
 
+===================
+Why was it written?
+===================
+I wrote the headphone indicator app because I was immensely unsatisfied
+with apps like `susomena's Headphones Indicator`__ which are over
+2 MiB in size, but 99% of their code is only related to advertisement.
+
+My task was to show that you can make it much, much better.
+
+__ https://play.google.com/store/apps/details?id=com.susomena.headphonesindicator
+
+
 ========
 Building
 ========
