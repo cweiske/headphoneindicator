@@ -9,6 +9,19 @@ The app aims to be a tiny as possible.
 Runs on Android 4.4+.
 
 
+=====
+Usage
+=====
+After installation, you have to start the application `at least once`__.
+Then it will be running as a background service that shows the headset
+status icon whenever the headphones are plugged in.
+
+You can close the app, and the status icon will still work - even after
+rebooting your phone.
+
+__ http://stackoverflow.com/a/8535062/282601
+
+
 ===================
 Why was it written?
 ===================
