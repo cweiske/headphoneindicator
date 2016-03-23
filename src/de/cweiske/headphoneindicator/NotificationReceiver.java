@@ -2,6 +2,7 @@ package de.cweiske.headphoneindicator;
 
 import android.app.Notification;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -31,7 +32,15 @@ public class NotificationReceiver extends BroadcastReceiver {
                     .setSmallIcon(R.drawable.headphones_w)
                     .setContentTitle(context.getResources().getString(R.string.plugged))
                     .setContentText("")
-                    .build()
+                    .setContentIntent(
+                        PendingIntent.getActivity(
+                            context,
+                            0,
+                            new Intent(context, MainActivity.class),
+                            PendingIntent.FLAG_UPDATE_CURRENT
+                        )
+                    )
+                .build()
             );
         } else {
             //unplugged
