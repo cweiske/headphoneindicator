@@ -1,70 +1,70 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Creator: CorelDRAW X5 -->
+
 <svg
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:svg="http://www.w3.org/2000/svg"
-    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-    xmlns:ns1="http://sozi.baierouge.fr"
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:cc="http://web.resource.org/cc/"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xml:space="preserve"
-    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-    viewBox="0 0 7493 5700"
-  >
- <defs
-    >
-  <style
-        type="text/css"
-      >
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xml:space="preserve"
+   style="fill-rule:evenodd"
+   viewBox="0 0 7966.08 7966.08"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   width="100%"
+   height="100%"
+   sodipodi:docname="headphones.svg"><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1440"
+     inkscape:window-height="826"
+     id="namedview14"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="100"
+     fit-margin-right="100"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.056568542"
+     inkscape:cx="3124.9605"
+     inkscape:cy="2772.8643"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" /><defs
+     id="defs4"><style
+       type="text/css"
+       id="style6">
    
     .fil0 {fill:black}
    
-  </style
-    >
- </defs
-  >
- <g
-      id="Layer_x0020_1"
-    >
-  <metadata
-        id="CorelCorpID_0Corel-Layer"
-    />
-  <path
-        class="fil0"
-        d="M1522 3175c77,15 152,37 224,66l0 2369c-146,58 -305,90 -471,90 -704,0 -1275,-571 -1275,-1275 0,-620 442,-1136 1028,-1251 0,-10 0,-18 0,-24 0,-861 300,-1644 784,-2213 493,-580 1177,-938 1935,-938 758,0 1441,359 1935,938 484,569 784,1351 784,2213 0,6 0,14 0,24 586,115 1028,631 1028,1251 0,704 -571,1275 -1275,1275 -166,0 -325,-32 -471,-90l0 -2369c72,-29 147,-51 224,-66l0 -24c0,-743 -254,-1412 -664,-1894 -401,-471 -953,-763 -1560,-763 -608,0 -1159,291 -1560,763 -410,482 -664,1151 -664,1894l0 24z"
-    />
- </g
-  >
-<metadata
-    ><rdf:RDF
-      ><cc:Work
-        ><dc:format
-          >image/svg+xml</dc:format
-        ><dc:type
-            rdf:resource="http://purl.org/dc/dcmitype/StillImage"
-        /><cc:license
-            rdf:resource="http://creativecommons.org/licenses/publicdomain/"
-        /><dc:publisher
-          ><cc:Agent
-              rdf:about="http://openclipart.org/"
-            ><dc:title
-              >Openclipart</dc:title
-            ></cc:Agent
-          ></dc:publisher
-        ></cc:Work
-      ><cc:License
-          rdf:about="http://creativecommons.org/licenses/publicdomain/"
-        ><cc:permits
-            rdf:resource="http://creativecommons.org/ns#Reproduction"
-        /><cc:permits
-            rdf:resource="http://creativecommons.org/ns#Distribution"
-        /><cc:permits
-            rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
-        /></cc:License
-      ></rdf:RDF
-    ></metadata
-  ></svg
->
+  </style></defs><path
+     style="fill:#000000;fill-rule:evenodd"
+     d="m 3982.9569,996.23711 c -521.6311,-0.4478 -1040.2885,167.53129 -1467.1711,466.05119 -440.3849,306.5944 -791.5743,734.4419 -1024.516,1216.6146 -228.8704,472.8174 -351.8369,995.7871 -362.4691,1520.8342 -298.31198,83.1409 -565.83582,269.1175 -750.85625,517.0062 -109.74657,146.0764 -189.43375,314.2985 -234.00564,491.4644 -69.164952,272.6438 -57.278282,566.5362 39.94506,830.8832 113.89097,312.8357 340.739,584.0314 631.44237,747.1093 269.65226,152.865 590.82766,214.9571 897.80466,168.659 117.8405,-17.0024 234.1492,-48.0023 342.3885,-98.1221 47.331,-30.6036 70.2845,-90.5137 63.4038,-145.6562 -1.5779,-588.2281 -0.1445,-1176.4585 -0.7329,-1764.6875 -0.023,-220.7188 0.074,-441.4376 -0.046,-662.1563 -71.795,-31.9978 -145.241,-60.9698 -220.9062,-82.4062 12.6912,-519.759 162.0725,-1038.6002 445.6416,-1475.5553 181.4073,-278.7649 420.3506,-521.6128 704.5783,-695.9091 318.9977,-194.9875 699.5455,-292.7013 1073.4186,-261.763 328.5582,26.3967 648.2003,146.3799 915.5148,338.362 277.2222,196.8515 504.8753,459.2752 671.6904,754.9278 211.1748,372.724 330.702,795.2883 357.4615,1222.4614 2.3946,39.0021 4.2174,78.0406 5.3198,117.1012 -61.0995,17.0737 -122.6075,36.3704 -177.125,69.375 -37.5196,33.3545 -52.5576,86.9948 -46.3438,136.125 1.3921,334.0608 0.238,668.1251 0.7346,1002.1874 0.072,474.3021 -0.067,948.6042 0.015,1422.9063 402.7628,195.4914 900.3504,180.3558 1290.7188,-38.4063 325.6934,-181.6001 576.6156,-495.1541 676.0584,-855.3078 96.8558,-348.4145 55.446,-734.4004 -118.0012,-1052.1121 -175.0252,-322.8869 -479.8657,-573.6797 -832.2965,-678.648 -8.8356,-2.8128 -17.8791,-5.2961 -26.667,-7.7133 -2.6683,-3.1847 -0.1415,-8.7031 -1.1585,-12.6238 C 6822.4208,3538.5998 6635.4057,2892.5131 6288.125,2343.7042 6027.176,1931.6993 5670.8505,1577.2911 5246.5958,1334.7755 4863.8511,1116.2259 4424.5093,994.22201 3982.9569,996.23711 z"
+     id="path10-6"
+     inkscape:connector-curvature="0" /><g
+     id="Layer_x0020_1"
+     style="fill:#ffffff"
+     transform="translate(236.03895,1133.54)"><metadata
+       id="CorelCorpID_0Corel-Layer" /><path
+       style="fill:#ffffff"
+       d="m 3732.1875,113.0625 c -490.5414,2.61287 -976.2229,171.13322 -1368.8564,463.36807 -340.2557,251.06248 -618.8341,582.16523 -819.3039,954.06093 -251.5871,465.0594 -386.6208,991.1189 -400.6199,1519.3781 -1.4831,41.0305 -0.67,82.1147 -2.5572,123.1269 -0.6368,24.1079 -6.16,48.844 -21.2027,68.0828 -23.3693,31.4157 -61.6402,49.4326 -100.1261,52.6572 -176.60173,36.2066 -341.38215,120.7384 -480.9588,233.701 -176.53377,144.497 -310.21362,341.626 -375.14773,560.8812 -74.180093,246.7271 -65.602736,518.9448 29.61648,758.7751 85.31373,218.4127 237.70314,410.5326 432.84802,540.4585 190.45438,129.1795 420.33543,200.5648 651.02693,198.2078 120.3266,-0.3119 240.718,-18.4949 355.0938,-55.8226 0,-736.4167 0,-1472.8333 0,-2209.25 -59.0141,-19.3218 -121.9401,-27.292 -178.6019,-53.5402 -37.6037,-26.418 -55.6668,-77.5043 -43.2106,-121.8661 -1.1215,-524.4803 127.2222,-1050.3 380.1861,-1510.3129 155.1923,-283.2209 360.6231,-540.1254 608.4772,-747.81964 177.2578,-148.56625 376.2076,-272.31681 591.0745,-358.6207 268.4979,-108.5634 560.2677,-161.18727 849.9095,-146.72142 381.268,18.07433 755.5963,147.14113 1069.5402,363.50596 294.8078,200.37528 541.3195,468.1584 727.4005,771.5383 219.4672,355.8727 359.5553,759.055 416.9882,1172.8583 23.7897,168.7104 36.1721,339.4785 30.4863,509.9159 -4.5508,39.4357 -36.0524,72.1618 -72.8265,84.8758 -13.3943,5.2476 -27.8389,5.8599 -41.9172,7.76 -36.5531,6.9912 -72.3425,17.3673 -107.6938,29.0517 0.4236,736.177 0.065,1472.3542 0.1875,2208.5313 317.2262,103.6521 679.4007,61.2768 963.2301,-114.0498 239.6341,-146.8325 422.7123,-382.7717 504.8627,-651.8801 95.6175,-311.5806 52.2445,-663.4739 -117.7203,-941.5968 -143.0972,-234.4751 -370.6632,-416.3236 -632.2139,-501.492 -56.9554,-18.4286 -115.9974,-30.0912 -172.7686,-49.2161 -37.3408,-18.809 -57.3871,-61.9918 -56.4054,-102.8589 2.397,-105.1742 -2.8472,-210.407 -11.3596,-315.2189 -27.4827,-326.5418 -100.301,-649.5052 -219.2748,-954.916 C 5958.8255,1482.874 5711.3094,1098.4341 5386.8205,791.49314 5148.2646,565.59575 4867.7058,381.48092 4559.9473,264.14888 4319.6471,172.00339 4063.7259,119.9441 3806.2202,113.90531 c -24.6695,-0.71949 -49.3533,-0.96825 -74.0327,-0.84281 z"
+       id="path10"
+       inkscape:connector-curvature="0" /></g><metadata
+     id="metadata12"><rdf:RDF><cc:Work><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><cc:license
+           rdf:resource="http://creativecommons.org/licenses/publicdomain/" /><dc:publisher><cc:Agent
+             rdf:about="http://openclipart.org/"><dc:title>Openclipart</dc:title></cc:Agent></dc:publisher></cc:Work><cc:License
+         rdf:about="http://creativecommons.org/licenses/publicdomain/"><cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" /><cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" /><cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" /></cc:License></rdf:RDF></metadata></svg>
