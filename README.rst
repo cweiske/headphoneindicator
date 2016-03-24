@@ -41,6 +41,28 @@ Building
 
     $ ./gradlew build
 
+Note that AndroidStudio 1.5.1 does not detect the gradle configuration correctly
+and produces ``.apk`` files much larger than necessary, with duplicated files.
+
+``gradlew`` on command line does it correctly, though.
+
+
+Releasing
+=========
+Build it normally, then sign the generated package file::
+
+    $ ./gradlew assembleRelease
+
+To sign the release with your key, put the path to the signing configuration
+file into ``gradle.properties``::
+
+    signingconfigfile=/path/to/signing-config.gradle
+
+The signing configuration file should look like shown in
+`Handling signing configs with Gradle`__
+
+__ https://www.timroes.de/2013/09/22/handling-signing-configs-with-gradle/
+
 
 =========================
 About headphone indicator
