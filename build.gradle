@@ -20,18 +20,6 @@ android {
             res.srcDirs = ['res']
         }
     }
-    defaultConfig {
-        applicationId "de.cweiske.headphoneindicator"
-        minSdkVersion 19
-        targetSdkVersion 19
-        versionCode 1
-        versionName "1.0"
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-        }
-    }
 }
 
 if (project.hasProperty("signingconfigfile")
