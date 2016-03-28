@@ -12,7 +12,7 @@ Runs on Android 4.4+.
 =====
 Usage
 =====
-After installation, you have to start the application `at least once`__.
+After installation_, you have to start the application `at least once`__.
 Then it will be running as a background service that shows the headset
 status icon whenever the headphones are plugged in.
 
@@ -32,6 +32,21 @@ with apps like `susomena's Headphones Indicator`__ which are over
 My task was to show that you can make it much, much better.
 
 __ https://play.google.com/store/apps/details?id=com.susomena.headphonesindicator
+
+
+============
+Installation
+============
+You have several installation options:
+
+#. Install from `F-Droid`__
+#. Pay on `Google Play`__
+#. Download ``.apk`` from `Github`__
+#. `Build it yourself <#building>`_
+
+__ https://f-droid.org/repository/browse/?fdid=de.cweiske.headphoneindicator
+__ https://play.google.com/store/apps/details?id=de.cweiske.headphoneindicator
+__ https://github.com/cweiske/headphoneindicator/releases
 
 
 ========
