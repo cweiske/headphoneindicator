@@ -107,7 +107,7 @@ __ http://www.gnu.org/licenses/gpl.html
 
 Author
 ======
-Headphone indicator was written by `Christian Weiske`__.
+Headphone indicator is written by `Christian Weiske`__.
 
 __ http://cweiske.de/
 
