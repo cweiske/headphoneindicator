@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/headphoneindicator.iml" filepath="$PROJECT_DIR$/headphoneindicator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/headphoneindicator.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/headphoneindicator.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/headphoneindicator.main.iml" filepath="$PROJECT_DIR$/.idea/modules/headphoneindicator.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/headphoneindicator.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/headphoneindicator.unitTest.iml" />
     </modules>
   </component>
 </project>

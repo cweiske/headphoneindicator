@@ -1,17 +1,26 @@
 apply plugin: 'com.android.application'
 
+// only required because aapt2 is not found otherwise
+// - see https://stackoverflow.com/a/50290877/282601
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
 buildscript {
     repositories {
-        jcenter()
+        google()
+        mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.5.0'
+        classpath 'com.android.tools.build:gradle:8.5.2'
     }
 }
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion "23.0.2"
+    namespace 'de.cweiske.headphoneindicator'
 
     sourceSets {
         main {
@@ -20,9 +29,14 @@ android {
             res.srcDirs = ['res']
         }
     }
+    defaultConfig {
+        minSdkVersion 19
+        compileSdkVersion 34
+        targetSdkVersion 34
+    }
 }
 
 if (project.hasProperty("signingconfigfile")
     && new File(project.property("signingconfigfile")).exists()) {
-    apply from: project.property("signingconfigfile");
+    apply from: project.property("signingconfigfile")
 }

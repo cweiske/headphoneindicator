@@ -81,8 +81,8 @@ __ https://www.timroes.de/2013/09/22/handling-signing-configs-with-gradle/
 
 Dependencies
 ============
-* gradle 2.12 (earlier will probably work, too)
-* Android SDK 19
+* gradle 8.5.2 (earlier will probably work, too)
+* Android SDK 34 (compiles for SDK 19 - Android 4.4)
 
 
 =========================
