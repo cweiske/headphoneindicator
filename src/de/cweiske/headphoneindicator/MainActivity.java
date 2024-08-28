@@ -1,5 +1,7 @@
 package de.cweiske.headphoneindicator;
 
+import static android.R.style.Theme_DeviceDefault_DayNight;
+
 import android.Manifest;
 import android.app.Activity;
 import android.app.NotificationChannel;
