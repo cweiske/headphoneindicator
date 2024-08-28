@@ -4,6 +4,9 @@ Headphone indicator
 Android app that shows a notification icon in the status bar when
 headphones are plugged into the phone.
 
+Shows a different icon when a headset is attached.
+Both 3.5mm audio jack devices and USB headphones/headsets are supported.
+
 The app aims to be a tiny as possible.
 
 Runs on Android 4.4+.
@@ -54,16 +57,17 @@ Building
 ========
 ::
 
-    $ gradle build
-
-Note that AndroidStudio 1.5.1 does not detect the gradle configuration correctly
-and produces ``.apk`` files much larger than necessary, with duplicated files.
-
-``gradle`` on command line does it correctly, though.
+    $ ./gradlew build
 
 
 Releasing
 =========
+Modify the version in ``AndroidManifest.xml```.
+
+Disable resource file optimization in ``gradle.properties``:
+
+    android.enableResourceOptimizations=false
+
 Build it normally, then sign the generated package file::
 
     $ gradle assembleRelease
