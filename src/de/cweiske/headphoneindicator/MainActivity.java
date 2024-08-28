@@ -1,6 +1,9 @@
 package de.cweiske.headphoneindicator;
 
+import android.Manifest;
 import android.app.Activity;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -31,6 +34,9 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        registerNotificationChannel();
+        requestNotificationPermission();
+
         setContentView(R.layout.activity_main);
         startService(new Intent(this, BackgroundService.class));
     }
@@ -67,5 +73,34 @@ public class MainActivity extends Activity {
             view.setImageResource(0);
             label.setText(R.string.unplugged);
         }
+    }
+
+    private void registerNotificationChannel() {
+        // Create the NotificationChannel, but only on API 26+ because
+        // the NotificationChannel class is not in the Support Library.
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
+            return;
+        }
+
+        CharSequence name = getString(R.string.channel_name);
+        String description = getString(R.string.channel_description);
+        NotificationChannel channel = new NotificationChannel(
+            NotificationReceiver.CHANNEL, name, NotificationManager.IMPORTANCE_DEFAULT
+        );
+        channel.setDescription(description);
+
+        NotificationManager notificationManager = getSystemService(NotificationManager.class);
+        notificationManager.createNotificationChannel(channel);
+    }
+
+    private void requestNotificationPermission() {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
+            return;
+        }
+
+        if (checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
+        requestPermissions(new String[] {Manifest.permission.POST_NOTIFICATIONS}, 0);
     }
 }

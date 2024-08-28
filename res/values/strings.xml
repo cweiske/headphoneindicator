@@ -3,4 +3,6 @@
     <string name="plugged_headphones">Headphones are plugged in</string>
     <string name="plugged_headset">Headset is plugged in</string>
     <string name="unplugged">Headphones are NOT plugged in</string>
+    <string name="channel_name">Headphone information</string>
+    <string name="channel_description">Shows when a headset is plugged in.</string>
 </resources>

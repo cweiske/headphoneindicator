@@ -1,12 +1,14 @@
 package de.cweiske.headphoneindicator;
 
+import static android.os.Build.VERSION.SDK_INT;
+
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
+import android.os.Build;
 
 /**
  * Shows and hides the status bar notification.
@@ -42,21 +44,27 @@ public class NotificationReceiver extends BroadcastReceiver {
             title = context.getResources().getString(R.string.plugged_headphones);
         }
 
-        nm.notify(
-            NOT_ID,
-            new Notification.Builder(context)
-                .setSmallIcon(R.drawable.headphones_w)
-                .setContentTitle(title)
-                .setContentText("")
-                .setContentIntent(
-                    PendingIntent.getActivity(
-                        context,
-                        0,
-                        new Intent(context, MainActivity.class),
-                       PendingIntent.FLAG_UPDATE_CURRENT
-                    )
+        int flags = PendingIntent.FLAG_UPDATE_CURRENT;
+        if (SDK_INT >= Build.VERSION_CODES.S) {
+            flags |= PendingIntent.FLAG_MUTABLE;
+        }
+
+        Notification.Builder notificationBuilder = new Notification.Builder(context)
+            .setSmallIcon(iconRes)
+            .setContentTitle(title)
+            .setContentText("")
+            .setContentIntent(
+                PendingIntent.getActivity(
+                    context,
+                    0,
+                    new Intent(context, MainActivity.class),
+                    flags
                 )
-            .build()
-        );
+            );
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            notificationBuilder.setChannelId(CHANNEL);
+        }
+
+        nm.notify(NOT_ID, notificationBuilder.build());
     }
 }
