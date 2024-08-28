@@ -1,16 +1,26 @@
 package de.cweiske.headphoneindicator;
 
+import android.content.Context;
 import android.content.Intent;
 import android.hardware.usb.UsbConstants;
 import android.hardware.usb.UsbDevice;
 import android.hardware.usb.UsbManager;
+import android.media.AudioDeviceInfo;
+import android.media.AudioManager;
+import android.os.Build;
 import android.os.Bundle;
 
 public class PlugIntentHelper {
+    private AudioManager audioManager;
+
+    public PlugIntentHelper(Context context) {
+        this.audioManager = (AudioManager)context.getSystemService(Context.AUDIO_SERVICE);
+    }
+
     /**
      * Handle all supported intent events and extract audio device information from it
      */
-    public static PlugInfo getPlugInfo(Intent intent)
+    public PlugInfo getPlugInfo(Intent intent)
     {
         if (intent.getAction().equals(Intent.ACTION_HEADSET_PLUG)) {
             return getHeadsetPlugInfo(intent);
@@ -27,7 +37,7 @@ public class PlugIntentHelper {
     /**
      * Extract interesting information from a "headset plugged" event
      */
-    protected static PlugInfo getHeadsetPlugInfo(Intent intent)
+    protected PlugInfo getHeadsetPlugInfo(Intent intent)
     {
         Bundle extras = intent.getExtras();
         if (extras == null) {
@@ -44,30 +54,41 @@ public class PlugIntentHelper {
     /**
      * Extract the interesting information from an USB device attached/detached event
      */
-    protected static PlugInfo getUsbDevicePlugInfo(Intent intent)
+    protected PlugInfo getUsbDevicePlugInfo(Intent intent)
     {
         UsbDevice usbDevice = (UsbDevice)intent.getParcelableExtra(UsbManager.EXTRA_DEVICE);
         if (usbDevice == null) {
             return new PlugInfo(false, false, false);
         }
 
-        boolean audioDevice = false;
+        boolean isAudioDevice = false;
         for (int i = 0; i < usbDevice.getInterfaceCount(); i++) {
             if (usbDevice.getInterface(i).getInterfaceClass() == UsbConstants.USB_CLASS_AUDIO) {
-                audioDevice = true;
+                isAudioDevice = true;
             }
         }
-        if (!audioDevice) {
+        if (!isAudioDevice) {
             return new PlugInfo(false, false, false);
         }
 
-        if (intent.getAction().equals(UsbManager.ACTION_USB_DEVICE_ATTACHED)) {
-            return new PlugInfo(true, true, false);
-        } else if (intent.getAction().equals(UsbManager.ACTION_USB_DEVICE_DETACHED)) {
+        if (intent.getAction().equals(UsbManager.ACTION_USB_DEVICE_DETACHED)) {
             return new PlugInfo(true, false, false);
         }
 
-        //should never be called :)
-        return new PlugInfo(false, false, false);
+        if (!intent.getAction().equals(UsbManager.ACTION_USB_DEVICE_ATTACHED)) {
+            //should never be called :)
+            return new PlugInfo(false, false, false);
+        }
+
+        boolean hasMicrophone = false;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && audioManager != null) {
+            for (AudioDeviceInfo audioDevice: audioManager.getDevices(AudioManager.GET_DEVICES_OUTPUTS)) {
+                if (audioDevice.getType() == AudioDeviceInfo.TYPE_USB_HEADSET) {
+                    hasMicrophone = true;
+                    break;
+                }
+            }
+        }
+        return new PlugInfo(true, true, hasMicrophone);
     }
 }

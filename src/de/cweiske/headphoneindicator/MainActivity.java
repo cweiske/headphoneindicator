@@ -24,7 +24,8 @@ public class MainActivity extends Activity {
     BroadcastReceiver headsetPlugReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            PlugInfo plugInfo = PlugIntentHelper.getPlugInfo(intent);
+            PlugIntentHelper plugIntentHelper = new PlugIntentHelper(context);
+            PlugInfo plugInfo = plugIntentHelper.getPlugInfo(intent);
             if (plugInfo.isAudioEvent) {
                 setPlugged(plugInfo.isPlugged, plugInfo.hasMicrophone);
             }
