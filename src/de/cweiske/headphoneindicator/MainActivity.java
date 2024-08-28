@@ -86,7 +86,9 @@ public class MainActivity extends Activity {
         CharSequence name = getString(R.string.channel_name);
         String description = getString(R.string.channel_description);
         NotificationChannel channel = new NotificationChannel(
-            NotificationReceiver.CHANNEL, name, NotificationManager.IMPORTANCE_DEFAULT
+            NotificationReceiver.CHANNEL, name,
+            //low = no sound
+            NotificationManager.IMPORTANCE_LOW
         );
         channel.setDescription(description);
 
