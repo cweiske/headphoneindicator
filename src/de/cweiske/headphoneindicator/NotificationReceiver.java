@@ -15,36 +15,48 @@ import android.os.Bundle;
  */
 public class NotificationReceiver extends BroadcastReceiver {
     static int NOT_ID = 1;
+    public static String CHANNEL = "plug";
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        Bundle extras = intent.getExtras();
-        if (extras == null) {
+        PlugInfo plugInfo = PlugIntentHelper.getPlugInfo(intent);
+        if (!plugInfo.isAudioEvent) {
             return;
         }
 
         NotificationManager nm = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-        if (extras.getInt("state") == 1) {
-            //plugged
-            nm.notify(
-                NOT_ID,
-                new Notification.Builder(context)
-                    .setSmallIcon(R.drawable.headphones_w)
-                    .setContentTitle(context.getResources().getString(R.string.plugged))
-                    .setContentText("")
-                    .setContentIntent(
-                        PendingIntent.getActivity(
-                            context,
-                            0,
-                            new Intent(context, MainActivity.class),
-                            PendingIntent.FLAG_UPDATE_CURRENT
-                        )
-                    )
-                .build()
-            );
-        } else {
+        if (!plugInfo.isPlugged) {
             //unplugged
             nm.cancel(NOT_ID);
+            return;
         }
+
+        //plugged in
+        int iconRes;
+        String title;
+        if (plugInfo.hasMicrophone) {
+            iconRes = R.drawable.headset_w;
+            title = context.getResources().getString(R.string.plugged_headset);
+        } else {
+            iconRes = R.drawable.headphones_w;
+            title = context.getResources().getString(R.string.plugged_headphones);
+        }
+
+        nm.notify(
+            NOT_ID,
+            new Notification.Builder(context)
+                .setSmallIcon(R.drawable.headphones_w)
+                .setContentTitle(title)
+                .setContentText("")
+                .setContentIntent(
+                    PendingIntent.getActivity(
+                        context,
+                        0,
+                        new Intent(context, MainActivity.class),
+                       PendingIntent.FLAG_UPDATE_CURRENT
+                    )
+                )
+            .build()
+        );
     }
 }

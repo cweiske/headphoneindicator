@@ -5,6 +5,9 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
+import android.hardware.usb.UsbManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -18,14 +21,9 @@ public class MainActivity extends Activity {
     BroadcastReceiver headsetPlugReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            Bundle extras = intent.getExtras();
-            if (extras == null) {
-                return;
-            }
-            if (extras.getInt("state") == 1) {
-                setPlugged(true);
-            } else {
-                setPlugged(false);
+            PlugInfo plugInfo = PlugIntentHelper.getPlugInfo(intent);
+            if (plugInfo.isAudioEvent) {
+                setPlugged(plugInfo.isPlugged, plugInfo.hasMicrophone);
             }
         }
     };
@@ -41,6 +39,9 @@ public class MainActivity extends Activity {
     protected void onResume() {
         super.onResume();
         IntentFilter filter = new IntentFilter(Intent.ACTION_HEADSET_PLUG);
+        filter.addAction(UsbManager.ACTION_USB_DEVICE_ATTACHED);
+        filter.addAction(UsbManager.ACTION_USB_DEVICE_DETACHED);
+
         registerReceiver(this.headsetPlugReceiver, filter);
     }
 
@@ -50,13 +51,18 @@ public class MainActivity extends Activity {
         this.unregisterReceiver(this.headsetPlugReceiver);
     }
 
-    public void setPlugged(boolean plugged)
+    public void setPlugged(boolean plugged, boolean microphone)
     {
         ImageView view = (ImageView) findViewById(R.id.image);
         TextView label = (TextView) findViewById(R.id.label);
         if (plugged) {
-            view.setImageResource(R.drawable.headphones_w);
-            label.setText(R.string.plugged);
+            if (microphone) {
+                view.setImageResource(R.drawable.headset_w);
+                label.setText(R.string.plugged_headset);
+            } else {
+                view.setImageResource(R.drawable.headphones_w);
+                label.setText(R.string.plugged_headphones);
+            }
         } else {
             view.setImageResource(0);
             label.setText(R.string.unplugged);
