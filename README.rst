@@ -89,6 +89,20 @@ Dependencies
 * Android SDK 34 (compiles for SDK 19 - Android 4.4)
 
 
+Meta data
+=========
+The code repository contains the meta data needed for the Google Play store:
+Text, icons, screenshots.
+
+They follow the `Triple-T gradle publisher`__, which are also
+`ingested by F-Droid`__.
+
+The meta data directory is ``src/play/`` because this app has no flavors.
+
+__ https://github.com/Triple-T/gradle-play-publisher
+__ https://f-droid.org/en/docs/FAQ_-_App_Developers/#how-do-i-change-the-description-and-add-meta-information-like-screenshots
+
+
 =========================
 About headphone indicator
 =========================
@@ -114,4 +128,3 @@ Author
 Headphone indicator was written by `Christian Weiske`__.
 
 __ http://cweiske.de/
-

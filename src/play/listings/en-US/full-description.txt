@@ -1,0 +1,12 @@
+Shows a notification icon in the status bar when headphones are plugged into the phone.
+
+Shows a different icon when a headset is attached.
+Both 3.5mm audio jack devices and USB headphones/headsets are supported.
+
+The app aims to be a tiny as possible. No ads, no analytics - just its core functionality.
+
+After installation, you have to start the application at least once. Then it will be running as a background service that shows the headset status icon whenever the headphones are plugged in.
+
+I wrote the headphone indicator app because I was immensely unsatisfied with apps like (google forced me to remove the name) which are over 2 MiB in size, but 99% of their code is only related to advertisement.
+
+Open Source - licensed under the GPLv3+. The source code can be inspected by anyone.

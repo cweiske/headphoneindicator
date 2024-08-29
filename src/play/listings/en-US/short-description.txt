@@ -1,0 +1,1 @@
+Shows a notification icon in the status bar when headphones are plugged in
