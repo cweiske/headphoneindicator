@@ -97,10 +97,12 @@ Text, icons, screenshots.
 They follow the `Triple-T gradle publisher`__, which are also
 `ingested by F-Droid`__.
 
-The meta data directory is ``src/play/`` because this app has no flavors.
+The meta data directory is ``src/main/play/`` - with ``main`` even though
+this app has no flavors, but it's `required by f-droid`__.
 
 __ https://github.com/Triple-T/gradle-play-publisher
 __ https://f-droid.org/en/docs/FAQ_-_App_Developers/#how-do-i-change-the-description-and-add-meta-information-like-screenshots
+__ https://gitlab.com/fdroid/fdroiddata/-/issues/3447
 
 
 =========================
